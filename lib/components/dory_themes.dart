@@ -8,9 +8,29 @@ class DoryThemes {
     primarySwatch:  DoryColors.primaryMeterialColor,
     scaffoldBackgroundColor: Colors.white,
     splashColor: Colors.white,
-    brightness: Brightness.light, //Dark
+    brightness: Brightness.light, //light
+    textTheme: _textTheme,
+    appBarTheme: _appBarTheme,
+ );
+ 
+ static ThemeData get darkTheme => ThemeData(
+    fontFamily: 'GmarketSansTTF',
+    primarySwatch:  DoryColors.primaryMeterialColor,
+    scaffoldBackgroundColor: Colors.white,
+    splashColor: Colors.white,
+    brightness: Brightness.dark, //Dark
     textTheme: _textTheme,
  );
+
+ static const AppBarTheme _appBarTheme = AppBarTheme(
+  backgroundColor: Colors.white,
+  iconTheme: IconThemeData(
+    color: DoryColors.primaryColor,
+    ),
+    //경계선 삭제
+    //elevation: 0,
+ );
+
   static const TextTheme _textTheme = TextTheme(
     headline4: TextStyle(
       fontSize: 32,
